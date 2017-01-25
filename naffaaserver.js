@@ -15,6 +15,18 @@ app.get('/', function (req, res) {
 })
 
 
+app.get('/location', function (req, res) {
+
+    res.sendfile(__dirname +  '/location.html');
+
+})
+
+app.get('/contact', function (req, res) {
+
+    res.sendfile(__dirname +  '/contact.html');
+
+})
+
 //Listen to the dafulat port and IP
 app.listen(3000,
 
