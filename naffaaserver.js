@@ -5,6 +5,7 @@ var app = express();           //create new express object
 
 //set the static folder
 app.use('/assets', express.static('assets'));
+app.use('/', express.static('dist'));
 
 
 
@@ -25,6 +26,13 @@ app.get('/location', function (req, res) {
 app.get('/contact', function (req, res) {
 
     res.sendfile(__dirname +  '/contact.html');
+
+})
+
+
+app.get('/register', function (req, res) {
+
+    res.sendfile(__dirname +  '/dist/registration.html');
 
 })
 
