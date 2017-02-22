@@ -1,3 +1,4 @@
+#!/usr/bin/env nodejs
 var express = require('express');  //include express library
 var app = express();           //create new express object
 
