@@ -100,6 +100,10 @@ app.post('/api/register', function(req, res){
               
         });
 
+        
+
+
+
       //console.log(JSON.stringify(Attendee_Data));
       //console.log(JSON.stringify(msg2));
       res.send(msg2);
