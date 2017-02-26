@@ -12,10 +12,27 @@ var Attendee = require('./attendee')
 app.use(bodyParser.json());
 
 //setup mongo db connection
+<<<<<<< HEAD
 var mongoLocation = 'mongodb://127.0.0.1:27017'
 
 
 
+=======
+var mongoLocation = 'mongodb://127.0.0.1:27017/attend'
+mongoDB.connect(mongoLocation, function(error){
+
+      if(error){
+
+          console.log(error);
+      }
+
+      else{
+
+          console.log ("Db connected");
+      }
+
+});
+>>>>>>> 5055dcc16244b79b6743e12ba8d3a121bb412b3a
 
 
 
