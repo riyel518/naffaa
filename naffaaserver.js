@@ -1,4 +1,4 @@
-//!/usr/bin/env nodejs
+#!/usr/bin/env nodejs
 
 var express = require('express');  //include express library
 var bodyParser = require('body-parser');
@@ -11,7 +11,7 @@ var Attendee = require('./attendee')
 app.use(bodyParser.json());
 
 //setup mongo db connection
-var mongoLocation = 'mongodb://127.0.0.1:27017/attend'
+var mongoLocation = 'mongodb://127.0.0.1:27017'
 mongoDB.connect(mongoLocation, function(error){
 
       if(error){
@@ -25,9 +25,6 @@ mongoDB.connect(mongoLocation, function(error){
       }
 
 });
-
-
-
 
 
 
@@ -80,38 +77,48 @@ app.post('/api/register', function(req, res){
     }
 
     else {
-        
+
         var msg2 = {
 
              "name" : "clear"
 
         }
 
-        
+
 
         var Attendee_Data = req.body
 
         var attendees = new Attendee(Attendee_Data);
 
         attendees.save(function(err) {
-        
-              if (err) throw err;
 
-              
+              if (err) {  throw err; }
+
+             else{
+              console.log("create file");
+             
+             }
         });
 
+<<<<<<< HEAD
         
 
 
 
       //console.log(JSON.stringify(Attendee_Data));
+=======
+          console.log("success");
+                
+
+     // console.log(JSON.stringify(Attendee_Data));
+>>>>>>> d8bbdf16a982215ca0b88004c00df549a7745e57
       //console.log(JSON.stringify(msg2));
       res.send(msg2);
-    
+
     }
 
 
-})
+});
 
 //Listen to the dafulat port and IP
 app.listen(3000,
