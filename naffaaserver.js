@@ -1,11 +1,10 @@
 #!/usr/bin/env nodejs
 
-var express = require('express');  //include express library
-var bodyParser = require('body-parser');
-var app = express();           //create new express object
-var mongoDB = require('mongoose');
-var Attendee = require('./attendee')
-
+var express = require('express');             //include express library
+var bodyParser = require('body-parser');      //get the lib for body-parser  
+var app = express();                          //create new express object
+var mongoDB = require('mongoose');            //import mongoose driver
+var Attendee = require('./attendee')           //import attendee model
 
 //setup body parser
 app.use(bodyParser.json());
@@ -13,20 +12,16 @@ app.use(bodyParser.json());
 //setup mongo db connection
 var mongoLocation = 'mongodb://127.0.0.1:27017'
 mongoDB.connect(mongoLocation, function(error){
-
       if(error){
 
           console.log(error);
       }
 
       else{
-
           console.log ("Db connected");
       }
 
 });
-
-
 
 //set the static folder
 app.use('/assets', express.static('assets'));
@@ -37,7 +32,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 //Set default route from /public/html/index.html
 app.get('/', function (req, res) {
 
@@ -45,28 +39,28 @@ app.get('/', function (req, res) {
 
 })
 
-
+//Route for location
 app.get('/location', function (req, res) {
 
     res.sendfile(__dirname +  '/location.html');
 
 })
 
+//Route for contact 
 app.get('/contact', function (req, res) {
 
     res.sendfile(__dirname +  '/contact.html');
 
 })
 
-
+//Route for register
 app.get('/register', function (req, res) {
 
     res.sendfile(__dirname +  '/dist/registration.html');
 
 })
 
-
-
+//Register Post route
 app.post('/api/register', function(req, res){
 
  if(!req.body || req.body.length === 0) {
@@ -78,46 +72,22 @@ app.post('/api/register', function(req, res){
 
     else {
 
-        var msg2 = {
+        var Attendee_Data = req.body            //Extract data from request body
 
-             "name" : "clear"
+        var attendees = new Attendee(Attendee_Data);   //transform data to the db model
 
-        }
-
-
-
-        var Attendee_Data = req.body
-
-        var attendees = new Attendee(Attendee_Data);
-
+        //Save new data
         attendees.save(function(err) {
 
               if (err) {  throw err; }
 
-             else{
-              console.log("create file");
-             
-             }
+             else{ console.log("create file"); }
         });
 
-<<<<<<< HEAD
-        
 
-
-
-      //console.log(JSON.stringify(Attendee_Data));
-=======
-          console.log("success");
-                
-
-     // console.log(JSON.stringify(Attendee_Data));
->>>>>>> d8bbdf16a982215ca0b88004c00df549a7745e57
-      //console.log(JSON.stringify(msg2));
-      res.send(msg2);
+        res.send(200);  //send 200 code for success
 
     }
-
-
 });
 
 //Listen to the dafulat port and IP
