@@ -3,6 +3,8 @@
 @import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 @import url(https://fonts.googleapis.com/css?family=PT+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Bitter:400,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
 
 
@@ -806,6 +808,169 @@ h6,
   font-family: 'Roboto', sans-serif;
 }
 #contacts1-2u P {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+#msg-box8-38 .mbr-section-title,
+#msg-box8-38 p {
+  color: #fff;
+}
+#msg-box8-38 .lead P {
+  font-family: 'Bitter', serif;
+  font-size: 20px;
+  color: #e47e7e;
+}
+#msg-box8-38 .mbr-section-title {
+  font-family: 'Noto Sans', sans-serif;
+  color: #b3cedc;
+}
+#menu-30 .hide-buttons .nav-btn {
+  display: none !important;
+}
+#menu-30 .navbar-caption {
+  color: #ffffff;
+}
+#menu-30 .navbar-toggler {
+  color: #f3c649;
+}
+#menu-30 .close-icon::before,
+#menu-30 .close-icon::after {
+  background-color: #f3c649;
+}
+#menu-30 .link,
+#menu-30 .dropdown-item {
+  color: #f3c649;
+  font-family: 'Lato', sans-serif;
+}
+#menu-30 .link {
+  font-size: 0.75rem;
+}
+#menu-30 .dropdown-item,
+#menu-30 .nav-dropdown-sm .link {
+  font-size: 0.812rem;
+}
+#menu-30 .link:hover,
+#menu-30 .dropdown-item:hover,
+#menu-30 .link:focus,
+#menu-30 .dropdown-item:focus {
+  color: #83b1e4;
+}
+#menu-30 .link[aria-expanded="true"],
+#menu-30 .dropdown-menu {
+  background: #0a0a0a;
+}
+#menu-30 .nav-dropdown-sm .link:focus,
+#menu-30 .nav-dropdown-sm .link:hover,
+#menu-30 .nav-dropdown-sm .dropdown-item:focus,
+#menu-30 .nav-dropdown-sm .dropdown-item:hover {
+  background: #1d1b1b!important;
+}
+#menu-30 .navbar,
+#menu-30 .nav-dropdown-sm,
+#menu-30 .nav-dropdown-sm .link[aria-expanded="true"],
+#menu-30 .nav-dropdown-sm .dropdown-menu {
+  background: #252222;
+}
+#menu-30 .bg-color.transparent .link {
+  color: #f3c649;
+  transition: none;
+}
+#menu-30 .bg-color.transparent.opened .link {
+  transition: color 0.2s ease-in-out;
+}
+#menu-30 .bg-color.transparent.opened .link:hover,
+#menu-30 .bg-color.transparent.opened .link:focus {
+  color: #83b1e4;
+}
+#menu-30 .link[aria-expanded="true"],
+#menu-30 .dropdown-item[aria-expanded="true"] {
+  color: #83b1e4!important;
+}
+#contacts1-32 STRONG {
+  color: #fac51c;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+}
+#contacts1-32 P {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+#menu-33 .hide-buttons .nav-btn {
+  display: none !important;
+}
+#menu-33 .navbar-caption {
+  color: #ffffff;
+}
+#menu-33 .navbar-toggler {
+  color: #f3c649;
+}
+#menu-33 .close-icon::before,
+#menu-33 .close-icon::after {
+  background-color: #f3c649;
+}
+#menu-33 .link,
+#menu-33 .dropdown-item {
+  color: #f3c649;
+  font-family: 'Lato', sans-serif;
+}
+#menu-33 .link {
+  font-size: 0.75rem;
+}
+#menu-33 .dropdown-item,
+#menu-33 .nav-dropdown-sm .link {
+  font-size: 0.812rem;
+}
+#menu-33 .link:hover,
+#menu-33 .dropdown-item:hover,
+#menu-33 .link:focus,
+#menu-33 .dropdown-item:focus {
+  color: #83b1e4;
+}
+#menu-33 .link[aria-expanded="true"],
+#menu-33 .dropdown-menu {
+  background: #0a0a0a;
+}
+#menu-33 .nav-dropdown-sm .link:focus,
+#menu-33 .nav-dropdown-sm .link:hover,
+#menu-33 .nav-dropdown-sm .dropdown-item:focus,
+#menu-33 .nav-dropdown-sm .dropdown-item:hover {
+  background: #1d1b1b!important;
+}
+#menu-33 .navbar,
+#menu-33 .nav-dropdown-sm,
+#menu-33 .nav-dropdown-sm .link[aria-expanded="true"],
+#menu-33 .nav-dropdown-sm .dropdown-menu {
+  background: #252222;
+}
+#menu-33 .bg-color.transparent .link {
+  color: #f3c649;
+  transition: none;
+}
+#menu-33 .bg-color.transparent.opened .link {
+  transition: color 0.2s ease-in-out;
+}
+#menu-33 .bg-color.transparent.opened .link:hover,
+#menu-33 .bg-color.transparent.opened .link:focus {
+  color: #83b1e4;
+}
+#menu-33 .link[aria-expanded="true"],
+#menu-33 .dropdown-item[aria-expanded="true"] {
+  color: #83b1e4!important;
+}
+#contacts1-35 STRONG {
+  color: #fac51c;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+}
+#contacts1-35 P {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
 }

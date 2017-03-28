@@ -4,7 +4,7 @@ var express = require('express');             //include express library
 var bodyParser = require('body-parser');      //get the lib for body-parser  
 var app = express();                          //create new express object
 var mongoDB = require('mongoose');            //import mongoose driver
-var Attendee = require('./attendee')           //import attendee model
+var Attendee = require('./attendee');          //import attendee model
 
 //setup body parser
 app.use(bodyParser.json());
@@ -26,6 +26,7 @@ mongoDB.connect(mongoLocation, function(error){
 //set the static folder
 app.use('/assets', express.static('assets'));
 app.use('/', express.static('dist'));
+app.use('/', express.static('speaker'));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -50,6 +51,13 @@ app.get('/location', function (req, res) {
 app.get('/contact', function (req, res) {
 
     res.sendfile(__dirname +  '/contact.html');
+
+})
+
+//Route for contact 
+app.get('/speaker', function (req, res) {
+
+    res.sendfile(__dirname +  '/speaker/speaker.html');
 
 })
 
@@ -89,6 +97,30 @@ app.post('/api/register', function(req, res){
 
     }
 });
+
+
+//Route for register
+app.get('/api/data', function (req, res) {
+
+    res.sendfile(__dirname +  '/mydata.json');
+    
+
+})
+
+//get the requested data from the database
+app.get('/api/register', function (req, res) {
+
+
+   Attendee.find({}, function(err, attende){
+
+         res.send(attende);
+            
+
+   })
+    
+   
+
+})
 
 //Listen to the dafulat port and IP
 app.listen(3000,
