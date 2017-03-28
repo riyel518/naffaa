@@ -102,7 +102,7 @@ app.post('/api/register', function(req, res){
 //Route for register
 app.get('/api/data', function (req, res) {
 
-    res.sendfile(__dirname +  '/mydata.json');
+    res.sendfile(__dirname +  '/speaker/mydata.json');
     
 
 })
